@@ -1927,11 +1927,6 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     column-gap: 4rem
   }
 }
-@media (max-width:35em) {
-  .row-prices {
-    grid-template-columns: 1fr 4.125rem 4.125rem 4.125rem
-  }
-}
 @media (max-width:61.99875em) {
   .header__link {
     font-size: 1.5rem
@@ -2221,6 +2216,9 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   }
   .gallery__body {
     grid-template-columns: repeat(2,1fr)
+  }
+  .row-prices {
+    grid-template-columns: 1fr 4.125rem 4.125rem 4.125rem
   }
   .row-prices__value {
     font-size: .75rem
