@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20240709152509">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240710155627">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,7 +14,7 @@
 
 <body>
 	<div class="wrapper">
-		<header class="header">
+		<header data-lp class="header">
 			<div class="header__container">
 				<a href="home.html" class="header__logo-pc"><img src="img/logo.webp" alt="Logo"></a>
 				<a href="home.html" class="header__logo-mobile"><img src="img/logo-mobile.webp" alt="Logo"></a>
@@ -119,7 +119,7 @@
 							<h1 class="hero__title">Masaż i profesjonalna kosmetologia we Wrocławiu</h1>
 							<div class="hero__text">Dbamy o to, by zachować i wydłużyć Twoje piękno i młodość.</div>
 							<div class="hero__buttons">
-								<a href="#" class="hero__button button">Nasze usługi</a>
+								<a data-popup="#popup-succes" href="#" class="hero__button button">Nasze usługi</a>
 								<a href="#" class="hero__button button button--light">Rezerwacja online</a>
 							</div>
 						</div>
@@ -756,7 +756,31 @@
 			</div>
 		</footer>
 	</div>
-	<script src="js/app.min.js?_v=20240709152509"></script>
+	<div id="popup-succes" aria-hidden="true" class="popup popup-succes">
+		<div class="popup__wrapper popup-succes__wrapper">
+			<div class="popup__content popup-succes__content">
+				<div class="popup-succes__top">
+					<div class="popup-succes__icon">
+						<img src="img/icons/succes.svg" alt="Image">
+					</div>
+					<button data-close type="button" class="popup-succes__close">
+						<img src="img/icons/close.svg" alt="Image">
+						<!-- <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path opacity="0.850056" d="M1.73333 1.48883L21.5469 21.0288" stroke="#979797" stroke-linecap="square" />
+						<path opacity="0.850056" d="M21.2667 1.48883L1.45309 21.0288" stroke="#979797" stroke-linecap="square" />
+					</svg> -->
+					</button>
+				</div>
+				<div class="popup-succes__body">
+					<h4 class="popup-succes__title">Dziękujemy za Twoją wiadomość!</h4>
+					<div class="popup-succes__text">
+						Nasz menedżer skontaktuje się z Tobą w najbliższym czasie.
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="js/app.min.js?_v=20240710155627"></script>
 </body>
 
 </html>
