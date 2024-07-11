@@ -1042,15 +1042,48 @@ body::after {
 .services__header-block {
   opacity: 0;
   -webkit-transform: translateY(10%);
-  transform: translateY(10%);
-  transition: opacity .8s ease .3s,-webkit-transform .8s ease .3s;
-  transition: transform .8s ease .3s,opacity .8s ease .3s;
-  transition: transform .8s ease .3s,opacity .8s ease .3s,-webkit-transform .8s ease .3s
+  transform: translateY(10%)
 }
 .services__header-block._watcher-view {
-  -webkit-transform: translateY(0);
-  transform: translateY(0);
-  opacity: 1
+  -webkit-animation: services-header-block .8s ease-out .3s forwards;
+  animation: services-header-block .8s ease-out .3s forwards
+}
+@-webkit-keyframes services-header-block {
+  to {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1
+  }
+}
+@keyframes services-header-block {
+  to {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1
+  }
+}
+.services__header-block--anim {
+  opacity: 0;
+  -webkit-transform: translateY(10%);
+  transform: translateY(10%)
+}
+.services__header-block--anim._watcher-view {
+  -webkit-animation: services-header-block-anim .8s ease-out .5s forwards;
+  animation: services-header-block-anim .8s ease-out .5s forwards
+}
+@-webkit-keyframes services-header-block-anim {
+  to {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1
+  }
+}
+@keyframes services-header-block-anim {
+  to {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1
+  }
 }
 .services__massage:not(:last-child) {
   margin-bottom: 8rem
@@ -1087,15 +1120,41 @@ body::after {
 .massage-services__item {
   opacity: 0;
   -webkit-transform: translateY(10%);
-  transform: translateY(10%);
-  transition: opacity .8s ease .1s,-webkit-transform .8s ease .1s;
-  transition: transform .8s ease .1s,opacity .8s ease .1s;
-  transition: transform .8s ease .1s,opacity .8s ease .1s,-webkit-transform .8s ease .1s
+  transform: translateY(10%)
 }
 .massage-services__item._watcher-view {
-  -webkit-transform: translateY(0);
-  transform: translateY(0);
-  opacity: 1
+  -webkit-animation: massage-services-item .8s ease-out .3s forwards;
+  animation: massage-services-item .8s ease-out .3s forwards
+}
+@-webkit-keyframes massage-services-item {
+  to {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1
+  }
+}
+@keyframes massage-services-item {
+  to {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1
+  }
+}
+.massage-services__item--anim {
+  opacity: 0;
+  -webkit-transform: translateY(5%);
+  transform: translateY(5%)
+}
+.massage-services__item--anim._watcher-view {
+  -webkit-animation: massage-services-item .8s ease-out .5s forwards;
+  animation: massage-services-item .8s ease-out .5s forwards
+}
+@keyframes massage-services-item {
+  to {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1
+  }
 }
 .massage-cosmetology__title {
   color: #333;
