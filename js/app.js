@@ -6208,7 +6208,7 @@ PERFORMANCE OF THIS SOFTWARE.
                 scrollToTop(800);
             }));
             window.onscroll = function() {
-                if (document.body.scrollTop > 1500 || document.documentElement.scrollTop > 1500) {
+                if (document.body.scrollTop > 1e3 || document.documentElement.scrollTop > 1e3) {
                     btnLink.style.opacity = "1";
                     btnLink.style.pointerEvents = "auto";
                     btnUp.style.opacity = "1";

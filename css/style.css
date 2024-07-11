@@ -176,7 +176,7 @@ textarea {
   caret-color: inherit;
   text-transform: uppercase;
   outline: 0!important;
-  transition: border-bottom .3s
+  transition: border .3s
 }
 .input::-webkit-input-placeholder {
   color: #b3b3b3
@@ -191,11 +191,11 @@ textarea {
   color: #b3b3b3
 }
 .input._form-focus {
-  border-bottom: .0625rem solid #b3b3b3
+  border: .0625rem solid #e8dce8
 }
 .input._form-error {
   color: #f53;
-  border-bottom: .0625rem solid #f53
+  border: .0625rem solid #f53
 }
 .form__error {
   padding-top: .25rem;
@@ -205,18 +205,22 @@ textarea {
 }
 .input[placeholder]:not([data-placeholder-nohiden])::-webkit-input-placeholder {
   -webkit-transition: opacity .3s;
-  transition: opacity .3s
+  transition: opacity .3s;
+  text-transform: capitalize
 }
 .input[placeholder]:not([data-placeholder-nohiden]):-ms-input-placeholder {
   -ms-transition: opacity .3s;
-  transition: opacity .3s
+  transition: opacity .3s;
+  text-transform: capitalize
 }
 .input[placeholder]:not([data-placeholder-nohiden])::-ms-input-placeholder {
   -ms-transition: opacity .3s;
-  transition: opacity .3s
+  transition: opacity .3s;
+  text-transform: capitalize
 }
 .input[placeholder]:not([data-placeholder-nohiden])::placeholder {
-  transition: opacity .3s
+  transition: opacity .3s;
+  text-transform: capitalize
 }
 .input[placeholder]:not([data-placeholder-nohiden]):focus::-webkit-input-placeholder {
   opacity: 0
@@ -236,7 +240,7 @@ textarea {
   outline: 0!important;
   resize: vertical;
   padding: .75rem 1rem;
-  transition: border-bottom .3s;
+  transition: border .3s;
   min-height: 5.625rem;
   max-height: 9.375rem;
   border: .0625rem solid #b3b3b3
@@ -244,21 +248,25 @@ textarea {
 textarea::-webkit-input-placeholder {
   color: #b3b3b3;
   -webkit-transition: opacity .3s;
-  transition: opacity .3s
+  transition: opacity .3s;
+  text-transform: capitalize
 }
 textarea:-ms-input-placeholder {
   color: #b3b3b3;
   -ms-transition: opacity .3s;
-  transition: opacity .3s
+  transition: opacity .3s;
+  text-transform: capitalize
 }
 textarea::-ms-input-placeholder {
   color: #b3b3b3;
   -ms-transition: opacity .3s;
-  transition: opacity .3s
+  transition: opacity .3s;
+  text-transform: capitalize
 }
 textarea::placeholder {
   color: #b3b3b3;
-  transition: opacity .3s
+  transition: opacity .3s;
+  text-transform: capitalize
 }
 textarea:focus::-webkit-input-placeholder {
   opacity: 0
@@ -273,7 +281,7 @@ textarea:focus::placeholder {
   opacity: 0
 }
 textarea._form-focus {
-  border-bottom: .0625rem solid #b3b3b3
+  border: .0625rem solid #e8dce8
 }
 body::after {
   content: "";
@@ -425,24 +433,21 @@ body::after {
   pointer-events: none;
   transition: opacity .3s
 }
-.page__btn-up {
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity .3s;
-  flex: 0 0 auto
-}
 .btn-up {
+  transition: opacity .3s;
+  flex: 0 0 auto;
   position: relative;
   cursor: pointer;
   border-radius: .75rem;
-  width: 2.25rem;
-  height: 2.25rem;
+  width: 2.5rem;
+  height: 2.5rem;
   opacity: 0;
   background-color: #4d3552;
   pointer-events: none;
   transition: background-color .3s
 }
 .btn-up::before {
+  font-size: .875rem;
   color: #fff;
   position: absolute;
   top: 50%;
@@ -621,7 +626,10 @@ body::after {
   z-index: 5
 }
 .header__link {
-  transition: color .3s
+  padding: .5rem;
+  border-radius: .5rem;
+  transition: background-color .3s;
+  font-size: 1.125rem
 }
 .header__phone {
   position: relative;
@@ -646,11 +654,13 @@ body::after {
   flex: 0 0 auto
 }
 .menu__link {
+  padding: .25rem .5rem;
   color: #141414;
   font-size: 1.125rem;
   font-weight: 500;
   line-height: 1.55;
-  transition: color .3s
+  transition: background-color .3s;
+  border-radius: .75rem
 }
 .menu__box {
   display: none
@@ -815,7 +825,6 @@ body::after {
   height: 100%
 }
 .social-footer {
-  padding-left: .5rem;
   color: #fff;
   display: flex;
   align-items: center;
@@ -824,7 +833,6 @@ body::after {
   column-gap: 2rem
 }
 .social-footer__link {
-  color: #fff;
   font-size: 1.5rem;
   transition: color .3s;
   color: #ccc
@@ -942,6 +950,7 @@ body::after {
 }
 .hero__image {
   max-width: 100%;
+  max-height: 40.625rem;
   border-radius: .75rem;
   overflow: hidden;
   -webkit-animation: hero-img .8s ease .4s forwards;
@@ -950,6 +959,7 @@ body::after {
 }
 .hero__image img {
   width: 100%;
+  max-height: 40.625rem;
   -o-object-fit: cover;
   object-fit: cover
 }
@@ -1866,7 +1876,8 @@ body::after {
   color: #4d4d4d;
   line-height: 1.5;
   display: grid;
-  row-gap: .9375rem
+  row-gap: .9375rem;
+  overflow-y: auto
 }
 .body-type-of-service__paragraph {
   opacity: 0;
@@ -2079,6 +2090,18 @@ body::after {
 .content-faq__title::marker {
   display: none
 }
+.content-faq__title span {
+  position: absolute;
+  top: 51%;
+  right: .125rem;
+  border-radius: .75rem;
+  width: 2.25rem;
+  height: 2.25rem;
+  background-color: transparent;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  transition: background-color .3s
+}
 ._spoller-init .content-faq__title {
   cursor: pointer
 }
@@ -2086,6 +2109,7 @@ body::after {
 ._spoller-init .content-faq__title::before {
   content: "";
   position: absolute;
+  z-index: 2;
   right: .8125rem;
   top: 50%;
   background-color: #333;
@@ -2685,9 +2709,9 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     column-gap: 4rem
   }
   .hero__body {
-    -webkit-column-gap: 8rem;
-    -moz-column-gap: 8rem;
-    column-gap: 8rem
+    -webkit-column-gap: 4rem;
+    -moz-column-gap: 4rem;
+    column-gap: 4rem
   }
   .hero__title {
     font-size: 2.625rem
@@ -2738,6 +2762,9 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     -webkit-column-gap: 4rem;
     -moz-column-gap: 4rem;
     column-gap: 4rem
+  }
+  .body-type-of-service__text {
+    max-height: 31.25rem
   }
 }
 @media (max-width:61.99875em) {
@@ -2969,11 +2996,6 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   .hero {
     padding-top: 10.5rem
   }
-  .hero__body {
-    -webkit-column-gap: 1.875rem;
-    -moz-column-gap: 1.875rem;
-    column-gap: 1.875rem
-  }
   .hero__button:nth-child(2) {
     display: none
   }
@@ -3124,6 +3146,11 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
       opacity: 1
     }
   }
+  .body-type-of-service__text {
+    max-height: 19.4375rem;
+    max-height: 100%;
+    overflow-y: hidden
+  }
   .body-type-of-service__paragraph {
     -webkit-transform: translate(0,5%);
     transform: translate(0,5%)
@@ -3218,6 +3245,13 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   }
   .body-type-of-service__image:nth-child(1) {
     height: 20rem
+  }
+}
+@media (max-width:37.49875em) {
+  .hero__body {
+    -webkit-column-gap: 2rem;
+    -moz-column-gap: 2rem;
+    column-gap: 2rem
   }
 }
 @media (max-width:37.5em) {
@@ -3489,20 +3523,6 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
       column-gap: calc(2rem + 2 * (100vw - 47.99875rem)/ 28.87625)
     }
   }
-  @supports ((-moz-column-gap:clamp(1.875rem ,-8.3061122895rem + 21.2112029782vw ,8rem)) or (column-gap:clamp(1.875rem ,-8.3061122895rem + 21.2112029782vw ,8rem))) {
-    .hero__body {
-      -webkit-column-gap: clamp(1.875rem ,-8.3061122895rem + 21.2112029782vw ,8rem);
-      -moz-column-gap: clamp(1.875rem ,-8.3061122895rem + 21.2112029782vw ,8rem);
-      column-gap: clamp(1.875rem ,-8.3061122895rem + 21.2112029782vw ,8rem)
-    }
-  }
-  @supports not ((-moz-column-gap:clamp(1.875rem ,-8.3061122895rem + 21.2112029782vw ,8rem)) or (column-gap:clamp(1.875rem ,-8.3061122895rem + 21.2112029782vw ,8rem))) {
-    .hero__body {
-      -webkit-column-gap: calc(1.875rem + 6.125 * (100vw - 47.99875rem)/ 28.87625);
-      -moz-column-gap: calc(1.875rem + 6.125 * (100vw - 47.99875rem)/ 28.87625);
-      column-gap: calc(1.875rem + 6.125 * (100vw - 47.99875rem)/ 28.87625)
-    }
-  }
   @supports ((-moz-column-gap:clamp(2rem ,-1.3244448292rem + 6.9261070949vw ,4rem)) or (column-gap:clamp(2rem ,-1.3244448292rem + 6.9261070949vw ,4rem))) {
     .about-us__container {
       -webkit-column-gap: clamp(2rem ,-1.3244448292rem + 6.9261070949vw ,4rem);
@@ -3567,6 +3587,32 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
       -webkit-column-gap: calc(2rem + 2 * (100vw - 47.99875rem)/ 28.87625);
       -moz-column-gap: calc(2rem + 2 * (100vw - 47.99875rem)/ 28.87625);
       column-gap: calc(2rem + 2 * (100vw - 47.99875rem)/ 28.87625)
+    }
+  }
+  @supports (max-height:clamp(19.4375rem ,-0.1975022726rem + 40.9073200294vw ,31.25rem)) {
+    .body-type-of-service__text {
+      max-height: clamp(19.4375rem ,-.1975022726rem + 40.9073200294vw ,31.25rem)
+    }
+  }
+  @supports not (max-height:clamp(19.4375rem ,-0.1975022726rem + 40.9073200294vw ,31.25rem)) {
+    .body-type-of-service__text {
+      max-height: calc(19.4375rem + 11.8125 * (100vw - 47.99875rem)/ 28.87625)
+    }
+  }
+}
+@media (min-width:37.49875em) and (max-width:76.875em) {
+  @supports ((-moz-column-gap:clamp(2rem ,0.095362052rem + 5.0792038348vw ,4rem)) or (column-gap:clamp(2rem ,0.095362052rem + 5.0792038348vw ,4rem))) {
+    .hero__body {
+      -webkit-column-gap: clamp(2rem ,.095362052rem + 5.0792038348vw ,4rem);
+      -moz-column-gap: clamp(2rem ,.095362052rem + 5.0792038348vw ,4rem);
+      column-gap: clamp(2rem ,.095362052rem + 5.0792038348vw ,4rem)
+    }
+  }
+  @supports not ((-moz-column-gap:clamp(2rem ,0.095362052rem + 5.0792038348vw ,4rem)) or (column-gap:clamp(2rem ,0.095362052rem + 5.0792038348vw ,4rem))) {
+    .hero__body {
+      -webkit-column-gap: calc(2rem + 2 * (100vw - 37.49875rem)/ 39.37625);
+      -moz-column-gap: calc(2rem + 2 * (100vw - 37.49875rem)/ 39.37625);
+      column-gap: calc(2rem + 2 * (100vw - 37.49875rem)/ 39.37625)
     }
   }
 }
@@ -3679,17 +3725,23 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   .button--light:hover {
     background-color: #e8dce8
   }
+  .input:hover {
+    border: .0625rem solid #333
+  }
+  textarea:hover {
+    border: .0625rem solid #333
+  }
   .btn-up:hover {
     background-color: #3e2b41
   }
   .header__link:hover {
-    color: #737373
+    background-color: #f2ebf2
   }
   .header__link-phone:hover {
     color: #737373
   }
   .menu__link:hover {
-    color: #737373
+    background-color: #f2ebf2
   }
   .menu-spollers__title:hover {
     color: #737373
@@ -3721,5 +3773,8 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   }
   .body-type-of-service__more:hover {
     color: #333
+  }
+  .content-faq__title span:hover {
+    background-color: #f2ebf2
   }
 }
