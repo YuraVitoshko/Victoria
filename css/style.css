@@ -515,13 +515,14 @@ body::after {
 .card__buttons {
   flex: 0 0 auto;
   display: flex;
+  justify-content: center;
   align-items: center;
   -webkit-column-gap: 1rem;
   -moz-column-gap: 1rem;
   column-gap: 1rem
 }
 .card__button {
-  width: 100%
+  max-width: 100%
 }
 .header-block {
   display: flex;
