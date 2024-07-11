@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20240710163703">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240711162817">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,7 +14,7 @@
 
 <body>
 	<div class="wrapper">
-		<header data-lp class="header">
+		<header data-lp data-scroll data-scroll-show="200" class="header">
 			<div class="header__container">
 				<a href="home.html" class="header__logo-pc"><img src="img/logo.webp" alt="Logo"></a>
 				<a href="home.html" class="header__logo-mobile"><img src="img/logo-mobile.webp" alt="Logo"></a>
@@ -114,11 +114,11 @@
 			</div>
 			<section class="prices">
 				<div class="prices__container">
-					<div class="prices__header-block header-block">
+					<div data-watch data-watch-once data-watch-threshold="0.1" class="prices__header-block header-block">
 						<h4 class="header-block__subtitle header-block__subtitle--center">[Nasza oferta]</h4>
 						<h2 class="header-block__title header-block__title--center">Cennik naszych usług</h2>
 					</div>
-					<div class="prices__table table-prices">
+					<div data-watch data-watch-once data-watch-threshold="0.1" class="prices__table table-prices">
 						<div class="table-prices__row row-prices row-prices--top">
 							<ul class="row-prices__column">
 								<li class="row-prices__value row-prices__value--top row-prices__value--left">Masaż</li>
@@ -274,7 +274,7 @@
 							</ul>
 						</div>
 					</div>
-					<div class="prices__table table-prices">
+					<div data-watch data-watch-once data-watch-threshold="0.1" class="prices__table table-prices">
 						<div class="table-prices__row row-prices row-prices--top">
 							<ul class="row-prices__column">
 								<li class="row-prices__value row-prices__value--top row-prices__value--left">Kosmetologia</li>
@@ -364,7 +364,7 @@
 			</section>
 			<section class="contacts">
 				<div class="contacts__container">
-					<form class="contacts__form form-contacts" action="#" method="get">
+					<form data-watch data-watch-once data-watch-threshold="0.1" class="contacts__form form-contacts" action="#" method="get">
 						<h3 class="form-contacts__title">Skontaktuj się z nami</h3>
 						<div class="form-contacts__line">
 							<label class="form-contacts__label" for="name">Imię <span>*</span></label>
@@ -375,9 +375,11 @@
 							<input autocomplete="off" id="phone" type="tel" name="form[]" data-required data-error="Wymagane pole" placeholder="885-123-456" class="form-contacts__input input">
 						</div>
 						<textarea maxlength="200" class="form-contacts__textarea" name="text" placeholder="Wiadomość"></textarea>
-						<button type="submit" class="form-contacts__button button">Wysłać wiadomość</button>
+						<div class="form-contacts__btn">
+							<button type="submit" class="form-contacts__button button">Wysłać wiadomość</button>
+						</div>
 					</form>
-					<div class="contacts__content content-contacts">
+					<div data-watch data-watch-once data-watch-threshold="0.1" class="contacts__content content-contacts">
 						<h4 class="content-contacts__subtitle">[ nasze dane kontaktowe ]</h4>
 						<h2 class="content-contacts__title">Zapisz się na zabieg</h2>
 						<div class="content-contacts__text">
@@ -387,20 +389,20 @@
 							</p>
 						</div>
 						<ul class="content-contacts__list">
-							<li class="content-contacts__item">
+							<li class="content-contacts__item _icon-map">
 								<div class="content-contacts__box">
 									<div class="content-contacts__info">Nasz adres:</div>
-									<a href="#" class="content-contacts__link">Wrocław, ul. Kamienna 21/1, parter bloku
+									<a href="https://www.google.com.ua/maps/search/Wroc%C5%82aw,+ul.+Kamienna+21%2F1,+parter+bloku+10-pi%C4%99trowego/@51.0889122,17.0201418,17z/data=!3m1!4b1?hl=ru&entry=ttu" target="_blank" class="content-contacts__link">Wrocław, ul. Kamienna 21/1, parter bloku
 										10-piętrowego</a>
 								</div>
 							</li>
-							<li class="content-contacts__item">
+							<li class="content-contacts__item _icon-mail">
 								<div class="content-contacts__box">
 									<div class="content-contacts__info">Poczta:</div>
 									<a href="mailto:massage-wroclaw@gmail.com" class="content-contacts__link">massage-wroclaw@gmail.com</a>
 								</div>
 							</li>
-							<li class="content-contacts__item">
+							<li class="content-contacts__item _icon-phone">
 								<div class="content-contacts__box">
 									<div class="content-contacts__info">Telefon:</div>
 									<a href="tel:123456789" class="content-contacts__link">123 456 789</a>
@@ -409,10 +411,10 @@
 						</ul>
 						<ul class="content-contacts__social social-content-contacts">
 							<li class="social-content-contacts__item">
-								<a href="#" class="social-content-contacts__link _icon-facebook"></a>
+								<a href="https://www.facebook.com/share/gnk1ZaqUvUWvKuGk/?mibextid=LQQJ4d" target="_blank" class="social-content-contacts__link _icon-facebook"></a>
 							</li>
 							<li class="social-content-contacts__item">
-								<a href="#" class="social-content-contacts__link _icon-instagram"></a>
+								<a href="https://www.instagram.com/blissfultouch.wroclaw?igsh=cDJlb3NjYTlmdWVj&utm_source=qr" target="_blank" class="social-content-contacts__link _icon-instagram"></a>
 							</li>
 						</ul>
 					</div>
@@ -457,7 +459,7 @@
 			</div>
 		</footer>
 	</div>
-	<script src="js/app.min.js?_v=20240710163703"></script>
+	<script src="js/app.min.js?_v=20240711162817"></script>
 </body>
 
 </html>
