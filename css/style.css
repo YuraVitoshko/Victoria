@@ -1877,7 +1877,8 @@ body::after {
   line-height: 1.5;
   display: grid;
   row-gap: .9375rem;
-  overflow-y: auto
+  overflow-y: auto;
+  overflow-x: hidden
 }
 .body-type-of-service__paragraph {
   opacity: 0;
