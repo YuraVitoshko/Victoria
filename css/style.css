@@ -820,7 +820,17 @@ body::after {
 }
 .footer__link {
   color: #ccc;
-  transition: color .3s
+  position: relative
+}
+.footer__link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: .0625rem;
+  background-color: #ccc;
+  transition: width .3s
 }
 .footer__map {
   align-self: center;
@@ -3845,8 +3855,8 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   .body-menu-spollers__link:hover {
     background-color: #f2ebf2
   }
-  .footer__link:hover {
-    color: #999
+  .footer__link:hover::after {
+    width: 100%
   }
   .social-footer__link:hover {
     color: #999
