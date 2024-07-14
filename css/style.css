@@ -2791,9 +2791,11 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   overflow: hidden;
   height: 100%;
   padding: 8px;
-  border-radius: 6px;
   margin-bottom: 5px;
-  will-change: border-color
+  will-change: border-color;
+  border-radius: 6px;
+  border: 1px solid #fff;
+  transition: border-color .3s ease
 }
 .lg-outer .lg-thumb-item.active,
 .lg-outer .lg-thumb-item:hover {
@@ -2884,11 +2886,6 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
 @media (min-width:768px) {
   .lg-outer .lg-thumb {
     padding: 32px 0
-  }
-  .lg-outer .lg-thumb-item {
-    border-radius: 6px;
-    border: 1px solid #fff;
-    transition: border-color .3s ease
   }
 }
 @media (max-width:61.99875em) {
