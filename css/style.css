@@ -605,21 +605,18 @@ body::after {
 .header__logo-pc {
   position: relative;
   z-index: 5;
-  flex: 0 0 5.25rem;
+  flex: 0 0 5rem;
   max-width: 100%
 }
 .header__logo-pc img {
   width: 100%
 }
-.header__logo-mobile {
-  display: none
-}
 .header__social {
   display: flex;
   align-items: center;
-  -webkit-column-gap: 1.25rem;
-  -moz-column-gap: 1.25rem;
-  column-gap: 1.25rem;
+  -webkit-column-gap: .9375rem;
+  -moz-column-gap: .9375rem;
+  column-gap: .9375rem;
   position: relative;
   z-index: 5
 }
@@ -653,9 +650,9 @@ body::after {
 .menu__list {
   display: flex;
   align-items: center;
-  -webkit-column-gap: 2rem;
-  -moz-column-gap: 2rem;
-  column-gap: 2rem;
+  -webkit-column-gap: 1.875rem;
+  -moz-column-gap: 1.875rem;
+  column-gap: 1.875rem;
   row-gap: .3125rem
 }
 .menu__item {
@@ -3085,14 +3082,6 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     width: 50%;
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%)
-  }
-  .header__logo-pc {
-    display: none
-  }
-  .header__logo-mobile {
-    position: relative;
-    z-index: 5;
-    display: block
   }
   .header__social {
     justify-content: center

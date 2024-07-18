@@ -4380,7 +4380,7 @@
                     nextEl: ".testimonials__btn-next"
                 },
                 breakpoints: {
-                    360: {
+                    359: {
                         slidesPerView: 1,
                         spaceBetween: 0,
                         autoHeight: true
