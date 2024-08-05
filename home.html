@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20240722102546">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240803164305">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -119,7 +119,7 @@
 							<h1 data-watch data-watch-once data-watch-threshold="0.3" class="hero__title">Masaż i profesjonalna kosmetologia we Wrocławiu</h1>
 							<div data-watch data-watch-once data-watch-threshold="0.3" class="hero__text">Dbamy o to, by zachować i wydłużyć Twoje piękno i młodość.</div>
 							<div data-watch data-watch-once data-watch-threshold="0.3" class="hero__buttons">
-								<a data-popup="#popup-succes" href="#" class="hero__button button">Nasze usługi</a>
+								<a href="#" class="hero__button button">Nasze usługi</a>
 							</div>
 						</div>
 						<div data-watch data-watch-once data-watch-threshold="0.3" class="hero__image">
@@ -662,7 +662,7 @@
 			</section>
 			<section class="contacts">
 				<div class="contacts__container">
-					<form data-watch data-watch-once data-watch-threshold="0.1" class="contacts__form form-contacts" action="#" method="get">
+					<form data-watch data-watch-once data-watch-threshold="0.1" data-dev data-popup-message="#popup-succes" class="contacts__form form-contacts" action="#" method="get">
 						<h3 class="form-contacts__title">Skontaktuj się z nami</h3>
 						<div class="form-contacts__line">
 							<label class="form-contacts__label" for="name">Imię <span>*</span></label>
@@ -762,7 +762,19 @@
 			<div class="popup__content popup-succes__content">
 				<div class="popup-succes__top">
 					<div class="popup-succes__icon">
-						<img src="img/icons/succes.svg" alt="Image">
+						<!-- <img src="img/icons/succes.svg" alt="Image"> -->
+						<svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<rect x="4" y="4" width="48" height="48" rx="24" fill="#D1FADF" />
+							<rect x="4" y="4" width="48" height="48" rx="24" stroke="#ECFDF3" stroke-width="8" />
+							<g clip-path="url(#clip0_2195_4503)">
+								<path d="M28 18C22.48 18 18 22.48 18 28C18 33.52 22.48 38 28 38C33.52 38 38 33.52 38 28C38 22.48 33.52 18 28 18ZM28 36C23.59 36 20 32.41 20 28C20 23.59 23.59 20 28 20C32.41 20 36 23.59 36 28C36 32.41 32.41 36 28 36ZM32.59 23.58L26 30.17L23.41 27.59L22 29L26 33L34 25L32.59 23.58Z" fill="#039855" />
+							</g>
+							<defs>
+								<clipPath id="clip0_2195_4503">
+									<rect width="24" height="24" fill="white" transform="translate(16 16)" />
+								</clipPath>
+							</defs>
+						</svg>
 					</div>
 					<button data-close type="button" class="popup-succes__close">
 						<img src="img/icons/close.svg" alt="Image">
@@ -781,7 +793,7 @@
 			</div>
 		</div>
 	</div>
-	<script src="js/app.min.js?_v=20240722102546"></script>
+	<script src="js/app.min.js?_v=20240803164305"></script>
 </body>
 
 </html>

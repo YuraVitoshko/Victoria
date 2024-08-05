@@ -174,7 +174,6 @@ textarea {
   padding: .75rem 1rem;
   border: .0625rem solid #b3b3b3;
   caret-color: inherit;
-  text-transform: uppercase;
   outline: 0!important;
   transition: border .3s
 }
@@ -299,6 +298,14 @@ body::after {
 .popup-show body::after {
   opacity: 1
 }
+.popup-show .popup-succes__icon {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  transition: opacity .5s ease-in-out .3s,-webkit-transform .5s ease-in-out .3s;
+  transition: opacity .5s ease-in-out .3s,transform .5s ease-in-out .3s;
+  transition: opacity .5s ease-in-out .3s,transform .5s ease-in-out .3s,-webkit-transform .5s ease-in-out .3s
+}
 .popup-succes {
   position: fixed;
   top: 0;
@@ -344,12 +351,9 @@ body::after {
 }
 .popup-succes__icon {
   margin-top: 1.25rem;
-  flex: 0 0 3rem;
-  width: 3rem;
-  z-index: 5
-}
-.popup-succes__icon img {
-  width: 100%
+  opacity: 0;
+  -webkit-transform: scale(0);
+  transform: scale(0)
 }
 .popup-succes__close {
   outline: 0
@@ -456,13 +460,13 @@ body::after {
 }
 .card {
   display: flex;
-  flex-direction: column
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: .75rem
 }
 .card__image {
   flex: 0 0 15rem;
-  max-height: 15rem;
-  overflow: hidden;
-  border-radius: .75rem
+  max-height: 15rem
 }
 .card__image img {
   width: 100%;
