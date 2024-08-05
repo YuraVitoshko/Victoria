@@ -600,10 +600,12 @@ body::after {
 }
 .breadcrumbs__list {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   -webkit-column-gap: 1rem;
   -moz-column-gap: 1rem;
-  column-gap: 1rem
+  column-gap: 1rem;
+  row-gap: .625rem
 }
 .breadcrumbs__item span {
   color: #737373
@@ -902,7 +904,7 @@ body::after {
   color: #ccc
 }
 .hero {
-  padding-top: 11rem;
+  padding-top: 9rem;
   padding-bottom: 6rem
 }
 .hero__body {
@@ -1111,7 +1113,6 @@ body::after {
   margin-bottom: 2rem
 }
 .services {
-  padding-top: 6rem;
   padding-bottom: 6rem
 }
 .services__header-block {
@@ -2888,9 +2889,6 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     -moz-column-gap: 4rem;
     column-gap: 4rem
   }
-  .services--padding {
-    padding-top: 11rem
-  }
   .services__header-block:not(:last-child) {
     margin-bottom: 6rem
   }
@@ -2918,9 +2916,6 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     -webkit-column-gap: 4rem;
     -moz-column-gap: 4rem;
     column-gap: 4rem
-  }
-  .type-of-service {
-    padding-top: 11rem
   }
   .body-type-of-service {
     -webkit-column-gap: 4rem;
@@ -3129,8 +3124,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     transform: translateX(-50%)
   }
   .breadcrumbs {
-    padding-top: 7rem;
-    padding-bottom: 2rem
+    padding-top: 6.25rem
   }
   .header__social {
     justify-content: center
@@ -3548,9 +3542,6 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   .hero__title {
     font-size: 1.875rem
   }
-  .services--padding {
-    padding-top: 8.5rem
-  }
   .services__header-block:not(:last-child) {
     margin-bottom: 2rem
   }
@@ -3564,9 +3555,6 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     font-size: 1.5rem
   }
   .prices {
-    padding-top: 8.5rem
-  }
-  .type-of-service {
     padding-top: 8.5rem
   }
 }
@@ -3589,16 +3577,6 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   @supports not (font-size:clamp(1.875rem ,1.5646551724rem + 1.3793103448vw ,2.625rem)) {
     .hero__title {
       font-size: calc(1.875rem + .75 * (100vw - 22.5rem)/ 54.375)
-    }
-  }
-  @supports (padding-top:clamp(8.5rem ,7.4655172414rem + 4.5977011494vw ,11rem)) {
-    .services--padding {
-      padding-top: clamp(8.5rem ,7.4655172414rem + 4.5977011494vw ,11rem)
-    }
-  }
-  @supports not (padding-top:clamp(8.5rem ,7.4655172414rem + 4.5977011494vw ,11rem)) {
-    .services--padding {
-      padding-top: calc(8.5rem + 2.5 * (100vw - 22.5rem)/ 54.375)
     }
   }
   @supports (margin-bottom:clamp(2rem ,0.3448275862rem + 7.3563218391vw ,6rem)) {
@@ -3648,16 +3626,6 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   }
   @supports not (padding-top:clamp(8.5rem ,7.4655172414rem + 4.5977011494vw ,11rem)) {
     .prices {
-      padding-top: calc(8.5rem + 2.5 * (100vw - 22.5rem)/ 54.375)
-    }
-  }
-  @supports (padding-top:clamp(8.5rem ,7.4655172414rem + 4.5977011494vw ,11rem)) {
-    .type-of-service {
-      padding-top: clamp(8.5rem ,7.4655172414rem + 4.5977011494vw ,11rem)
-    }
-  }
-  @supports not (padding-top:clamp(8.5rem ,7.4655172414rem + 4.5977011494vw ,11rem)) {
-    .type-of-service {
       padding-top: calc(8.5rem + 2.5 * (100vw - 22.5rem)/ 54.375)
     }
   }
