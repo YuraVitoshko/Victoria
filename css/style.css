@@ -791,15 +791,15 @@ body::after {
 }
 .body-menu-spollers__link {
   color: #333;
-  font-size: 1.125rem;
   font-weight: 500;
   line-height: 1.55;
-  transition: background-color .3s;
+  transition: background-color .3s,color .3s;
   border-radius: .75rem;
   padding: .25rem .5rem
 }
 .body-menu-spollers__link--bold {
   font-weight: 700;
+  padding-left: .25rem;
   position: relative
 }
 .body-menu-spollers__link--bold::after {
@@ -3873,7 +3873,8 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     background-color: #f2ebf2
   }
   .body-menu-spollers__link:hover {
-    background-color: #f2ebf2
+    background-color: #f2ebf2;
+    color: #5d4062
   }
   .body-menu-spollers__link--bold:hover {
     background-color: transparent
