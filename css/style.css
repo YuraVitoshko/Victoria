@@ -594,6 +594,10 @@ body::after {
   height: .0625rem;
   background-color: #ebebeb
 }
+.page__error-block {
+  padding-top: 16.875rem;
+  padding-bottom: 18.75rem
+}
 .breadcrumbs {
   padding-top: 9rem;
   padding-bottom: 4rem
@@ -626,6 +630,103 @@ body::after {
   -webkit-transform: rotate(-90deg);
   transform: rotate(-90deg);
   font-size: .75rem
+}
+.error-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: .625rem
+}
+.error-block__num {
+  display: flex;
+  color: #2e2031
+}
+.error-block__num span {
+  text-align: center;
+  font-size: 6.25rem;
+  font-weight: 700;
+  opacity: 0
+}
+.error-block__num span:nth-child(1) {
+  -webkit-transform: translateY(-150%);
+  transform: translateY(-150%);
+  -webkit-animation: value01 .7s linear forwards;
+  animation: value01 .7s linear forwards
+}
+.error-block__num span:nth-child(2) {
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  -webkit-animation: value02 .9s linear forwards;
+  animation: value02 .9s linear forwards
+}
+.error-block__num span:nth-child(3) {
+  -webkit-transform: translateY(-100%);
+  transform: translateY(-100%);
+  -webkit-animation: value03 1.2s linear forwards;
+  animation: value03 1.2s linear forwards
+}
+@-webkit-keyframes value01 {
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0) rotate(-4deg);
+    transform: translateY(0) rotate(-4deg)
+  }
+}
+@keyframes value01 {
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0) rotate(-4deg);
+    transform: translateY(0) rotate(-4deg)
+  }
+}
+@-webkit-keyframes value02 {
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0)
+  }
+}
+@keyframes value02 {
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0)
+  }
+}
+@-webkit-keyframes value03 {
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0) rotate(4deg);
+    transform: translateY(0) rotate(4deg)
+  }
+}
+@keyframes value03 {
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0) rotate(4deg);
+    transform: translateY(0) rotate(4deg)
+  }
+}
+.error-block__text {
+  color: #4d3552;
+  font-size: 2rem;
+  -webkit-animation: error-block-text .5s linear forwards;
+  animation: error-block-text .5s linear forwards
+}
+@-webkit-keyframes error-block-text {
+  to {
+    opacity: 1;
+    -webkit-transform: rotate(-4deg);
+    transform: rotate(-4deg)
+  }
+}
+@keyframes error-block-text {
+  to {
+    opacity: 1;
+    -webkit-transform: rotate(-4deg);
+    transform: rotate(-4deg)
+  }
 }
 .header {
   position: fixed;
