@@ -6333,6 +6333,34 @@ PERFORMANCE OF THIS SOFTWARE.
                 requestAnimationFrame(animateScroll);
             }
         }));
+        document.addEventListener("DOMContentLoaded", (function() {
+            let subMenus = document.querySelectorAll(".menu__item--sub-menu");
+            subMenus.forEach((function(menuItem) {
+                menuItem.addEventListener("click", (function(event) {
+                    let submenu = this.querySelector(".menu__sub-list");
+                    if (submenu.classList.contains("active")) {
+                        submenu.classList.remove("active");
+                        this.classList.remove("active");
+                    } else {
+                        closeAllSubmenus();
+                        submenu.classList.add("active");
+                        this.classList.add("active");
+                    }
+                }));
+            }));
+            document.addEventListener("click", (function(event) {
+                if (!event.target.closest(".menu__item--sub-menu")) closeAllSubmenus();
+            }));
+            function closeAllSubmenus() {
+                subMenus.forEach((function(menuItem) {
+                    let submenu = menuItem.querySelector(".menu__sub-list");
+                    if (submenu) {
+                        submenu.classList.remove("active");
+                        menuItem.classList.remove("active");
+                    }
+                }));
+            }
+        }));
         window["FLS"] = false;
         menuInit();
         spollers();
